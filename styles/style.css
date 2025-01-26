@@ -107,11 +107,7 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  text-shadow:
-    -1px 0 var(--text-outline-color, #fff),
-    0 1px var(--text-outline-color, #fff),
-    1px 0 var(--text-outline-color, #fff),
-    0 -1px var(--text-outline-color, #fff);
+  text-shadow: -1px 0 var(--text-outline-color, #fff), 0 1px var(--text-outline-color, #fff), 1px 0 var(--text-outline-color, #fff), 0 -1px var(--text-outline-color, #fff);
   font-family: var(--accent-font-family, "PressStart2P", monospace);
   font-size: var(--small-font-size, 14px);
   mix-blend-mode: hard-light; 
