@@ -22,8 +22,9 @@ p,
 ul,
 ol,
 li {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-size: 18px;
 }
 
 a {
@@ -44,10 +45,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
+  block-size: 1px;
+  inline-size: 1px;
+  white-space: nowrap;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  white-space: nowrap;
 }
