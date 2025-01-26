@@ -94,14 +94,6 @@
   border-block-end: 2px solid var(--border-color, #000);
 }
 
-.card__image {
-  display: block;
-  inline-size: 100%;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1 / 1;
-}
-
 .card__image-corner-text {
   position: absolute;
   top: 25px;
@@ -117,8 +109,16 @@
   .card__image-corner-text {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-outline-color, #fff);
-    text-stroke: 1px var(--text-outline-color, #fff);
+    text-stroke: 1px var(--text-outline-color, #fff);      
   }
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .card__text {
