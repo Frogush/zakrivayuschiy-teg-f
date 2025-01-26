@@ -19,11 +19,7 @@
   min-block-size: 100dvb;
   min-inline-size: 320px;
   color: var(--main-text-color, #000);
-  background-image: 
-    var(--bg-image,
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom,#d3d3d3 0 2px, transparent 2px 4px), 
-    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%)); 
+  background-image: var(--bg-image, repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom,#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%));
   background-attachment: fixed;
   background-size: cover;
   font-family: var(--main-font-family, "Inter", sans-serif);
@@ -111,14 +107,14 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  text-shadow: 
+  text-shadow:
     -1px 0 var(--text-outline-color, #fff),
     0 1px var(--text-outline-color, #fff),
     1px 0 var(--text-outline-color, #fff),
     0 -1px var(--text-outline-color, #fff);
   font-family: var(--accent-font-family, "PressStart2P", monospace);
   font-size: var(--small-font-size, 14px);
-  mix-blend-mode: hard-light;   
+  mix-blend-mode: hard-light; 
 }
 
 @supports (-webkit-text-stroke: 1px var(--text-outline-color, #fff)) {
@@ -155,7 +151,7 @@
   padding: 0;
   block-size: 38px;
   border: 2px solid transparent;
-  transition: border 0.3s ease;  
+  transition: border 0.3s ease;
 }
 
 .like-icon {
