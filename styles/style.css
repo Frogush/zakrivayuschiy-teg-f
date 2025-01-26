@@ -19,7 +19,12 @@
   min-block-size: 100dvb;
   min-inline-size: 320px;
   color: var(--main-text-color, #000);
-  background-image: var(--bg-image, repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom,#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%));
+  background-image: var(
+    --bg-image,
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%)
+  );
   background-attachment: fixed;
   background-size: cover;
   font-family: var(--main-font-family, "Inter", sans-serif);
@@ -38,7 +43,7 @@
 .button {
   position: relative;
   border: 2px solid var(--border-color, #000);
-  background:var(--bg-color, #fff);
+  background: var(--bg-color, #fff);
   cursor: pointer;
   font-family: var(--accent-font-family, "PressStart2P", monospace);
   font-size: var(--small-font-size, 14px);
@@ -84,7 +89,7 @@
 .card__title {
   line-height: normal;
   border-block-end: 2px solid var(--border-color, #000);
-  font-variation-settings: 'wght' var(--font-bold, 700);
+  font-variation-settings: "wght" var(--font-bold, 700);
   padding-inline: 10px;
   padding-block: 5px 4px;
 }
@@ -99,17 +104,19 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  text-shadow: -1px 0 var(--text-outline-color, #fff), 0 1px var(--text-outline-color, #fff), 1px 0 var(--text-outline-color, #fff), 0 -1px var(--text-outline-color, #fff);
+  text-shadow: -1px 0 var(--text-outline-color, #fff),
+    0 1px var(--text-outline-color, #fff), 1px 0 var(--text-outline-color, #fff),
+    0 -1px var(--text-outline-color, #fff);
   font-family: var(--accent-font-family, "PressStart2P", monospace);
   font-size: var(--small-font-size, 14px);
-  mix-blend-mode: hard-light; 
+  mix-blend-mode: hard-light;
 }
 
 @supports (-webkit-text-stroke: 1px var(--text-outline-color, #fff)) {
   .card__image-corner-text {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-outline-color, #fff);
-    text-stroke: 1px var(--text-outline-color, #fff);      
+    text-stroke: 1px var(--text-outline-color, #fff);
   }
 }
 
@@ -254,7 +261,8 @@ body:has(.dialog-block[open]) {
 }
 
 .filter__all-in-one {
-  filter: hue-rotate(70deg) blur(2px) brightness(140%) contrast(80%) saturate(70%);
+  filter: hue-rotate(70deg) blur(2px) brightness(140%) contrast(80%)
+    saturate(70%);
 }
 
 /* Mobile Version */
@@ -262,7 +270,7 @@ body:has(.dialog-block[open]) {
 @media (width <= 375px) {
   .header {
     padding-block: 120px;
-  } 
+  }
 
   .card {
     inline-size: var(--card-size-mobile, 100vw);
