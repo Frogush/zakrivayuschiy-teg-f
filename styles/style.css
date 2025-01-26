@@ -204,7 +204,7 @@
   align-items: center;
   flex-direction: column;
   line-height: 150%;
-  padding: 29px 11px; 
+  padding: 29px 11px;
   max-inline-size: 357px;
   text-transform: uppercase;
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
@@ -295,12 +295,12 @@ body:has(.dialog-block[open]) {
     right: 13px;
   }
 
-  .dialog__button { 
-    flex-direction: column; 
-    margin-block-end: 100px; 
-    block-size: 84px; 
-    inline-size: 306px; 
-  } 
+  .dialog__button {
+    flex-direction: column;
+    margin-block-end: 100px;
+    block-size: 84px;
+    inline-size: 306px;
+  }
 
   .dialog__form {
     padding: 30px 20px;
