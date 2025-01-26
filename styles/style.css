@@ -28,7 +28,7 @@
   background-attachment: fixed;
   background-size: cover;
   font-family: var(--main-font-family, "Inter", sans-serif);
-  font-variation-settings: "wght" (var(--font-normal, 400));
+  font-variation-settings: "wght" var(--font-normal, 400);
   gap: 100px;
 }
 
@@ -45,7 +45,7 @@
   border: 2px solid var(--border-color, #000);
   background: var(--bg-color, #fff);
   cursor: pointer;
-  font-family: var(--accent-font-family, "PressStart2P", monospace);
+  font-family: var(--accent-font-family, "PressStart2P", fantasy);
   font-size: var(--small-font-size, 14px);
 }
 
@@ -54,7 +54,7 @@
 .header {
   margin: 0 auto;
   text-align: center;
-  font-family: var(--accent-font-family, "PressStart2P", monospace);
+  font-family: var(--accent-font-family, "PressStart2P", fantasy);
   padding-block: 128px;
   padding-inline: 14px;
 }
@@ -107,7 +107,7 @@
   text-shadow: -1px 0 var(--text-outline-color, #fff),
     0 1px var(--text-outline-color, #fff), 1px 0 var(--text-outline-color, #fff),
     0 -1px var(--text-outline-color, #fff);
-  font-family: var(--accent-font-family, "PressStart2P", monospace);
+  font-family: var(--accent-font-family, "PressStart2P", fantasy);
   font-size: var(--small-font-size, 14px);
   mix-blend-mode: hard-light;
 }
@@ -170,7 +170,6 @@
 .button__text {
   color: var(--accent-text-color, #fff);
   mix-blend-mode: difference;
-  font-variation-settings: "wght" (var(--font-normal, 400));
 }
 
 /* Dialog window */
@@ -189,27 +188,43 @@
 .floppy-icon {
   position: relative;
   z-index: 2;
+  block-size: 21px;
+  inline-size: 21px;
   mix-blend-mode: difference;
   fill: var(--accent-text-color, #fff);
 }
 
 .dialog-block {
-  line-height: 21px;
-  max-inline-size: 353px;
+  padding: 0 18px;
   border: 2px solid var(--border-color, #000);
-  text-transform: uppercase;
-  font-family: var(--accent-font-family, "PressStart2P", monospace);
-  padding-inline: 30px;
 }
 
-.dialog-block[open] {
-  display: grid;
-  align-content: start;
+.dialog__form {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  grid-template-columns: min-content 1fr;
-  gap: 28px 20px;
-  padding-block: 28px;
+  flex-direction: column;
+  line-height: 150%;
+  padding: 29px 11px; 
+  max-inline-size: 357px;
+  text-transform: uppercase;
+  font-family: var(--accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 28px;
+}
+
+.dialog__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  inline-size: 100%;
+  gap: 20px;
+}
+
+.dialog-block[open] .floppy-icon {
+  block-size: 39px;
+  inline-size: 39px;
 }
 
 body:has(.dialog-block[open]) {
@@ -217,20 +232,20 @@ body:has(.dialog-block[open]) {
 }
 
 .dialog-block::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog__text {
-  font-size: var(--small-font-size, 14px);
-}
-
-.dialog-form {
-  grid-column: span 2;
+  max-inline-size: 234px;
+  text-transform: inherit;
+  white-space: normal;
+  font-family: var(--accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
 }
 
 .dialog__close-button {
-  block-size: 40px;
-  inline-size: 100%;
+  width: 100%;
+  padding: 10px 15px;
   text-transform: uppercase;
 }
 
@@ -280,14 +295,24 @@ body:has(.dialog-block[open]) {
     right: 13px;
   }
 
-  .dialog__button {
-    flex-direction: column;
-    margin-block-end: 100px;
-    block-size: 84px;
-    inline-size: 306px;
+  .dialog__button { 
+    flex-direction: column; 
+    margin-block-end: 100px; 
+    block-size: 84px; 
+    inline-size: 306px; 
+  } 
+
+  .dialog__form {
+    padding: 30px 20px;
+    max-inline-size: 341px;
   }
 
-  .dialog-block[open] {
-    max-inline-size: 341px;
+  .dialog__text {
+    max-inline-size: 198px;
+  }
+
+  .floppy-icon {
+    block-size: 28px;
+    inline-size: 28px;
   }
 }
