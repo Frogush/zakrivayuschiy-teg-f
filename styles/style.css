@@ -28,7 +28,7 @@
   background-attachment: fixed;
   background-size: cover;
   font-family: var(--main-font-family, "Inter", sans-serif);
-  font-variation-settings: "wght" (var(--font-bold, 400));
+  font-variation-settings: "wght" (var(--font-normal, 400));
   gap: 100px;
 }
 
@@ -170,7 +170,7 @@
 .button__text {
   color: var(--accent-text-color, #fff);
   mix-blend-mode: difference;
-  font-variation-settings: "wght" (var(--font-bold, 400));
+  font-variation-settings: "wght" (var(--font-normal, 400));
 }
 
 /* Dialog window */
